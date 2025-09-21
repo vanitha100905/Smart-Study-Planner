@@ -21,4 +21,4 @@ A web app to help students manage study tasks efficiently with deadlines, subjec
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YourUsername/smart-study-planner.git
+   git clone https://github.com/100905/Smart-study-Planner.git
