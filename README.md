@@ -1,5 +1,3 @@
-# Smart-Study-Planner
-Smart Study Planner: A web app to manage study tasks efficiently. Add, edit, delete tasks with deadlines, subjects, and priorities. Features search, filters, progress tracking, weekly view, dark/light mode, and offline storage using Local Storage.
 # Smart Study Planner
 
 A web app to help students manage study tasks efficiently with deadlines, subjects, and priority levels. Features include task management, search & filter, progress tracking, weekly view, dark/light mode, and offline storage using Local Storage.
