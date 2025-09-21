@@ -1,0 +1,238 @@
+/* ---------- General Styling ---------- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #c4d3db, #ece9f3);
+  color: #333;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #4d123f, #6d2a5a);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease-in-out;
+}
+header button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #fff;
+  color: #4d123f;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+header button:hover {
+  background: #f3e5f5;
+  transform: scale(1.05);
+}
+
+/* Dark Mode */
+.dark {
+  background: #1a1a1a;
+  color: #eee;
+}
+.dark header {
+  background: linear-gradient(135deg, #111, #222);
+}
+.dark .task-form, 
+.dark .task-list, 
+.dark .filters, 
+.dark .progress-section,
+.dark .weekly-planner {
+  background: #2a2a2a;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.dark header button {
+  background: #444;
+  color: #eee;
+}
+
+/* Main Sections */
+main {
+  padding: 20px;
+  max-width: 950px;
+  margin: auto;
+}
+section {
+  background: white;
+  padding: 18px;
+  margin-bottom: 25px;
+  border-radius: 14px;
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 18px rgba(0,0,0,0.2);
+}
+
+/* Quote Box */
+#quoteBox {
+  background: #ffe8f1;
+  border-left: 6px solid #4d123f;
+  font-style: italic;
+  font-size: 15px;
+  animation: slideDown 0.8s ease-in-out;
+}
+
+/* ---------- Form Styling ---------- */
+.task-form input, 
+.task-form select, 
+.task-form button {
+  padding: 10px;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: all 0.3s;
+}
+.task-form input:focus,
+.task-form select:focus {
+  border-color: #6d2a5a;
+  outline: none;
+  box-shadow: 0 0 6px rgba(77,18,63,0.4);
+}
+.task-form button {
+  background: linear-gradient(135deg, #4d123f, #6d2a5a);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.task-form button:hover {
+  background: linear-gradient(135deg, #6d2a5a, #8c3b75);
+  transform: scale(1.03);
+}
+
+/* ---------- Filters ---------- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.filters input, 
+.filters select, 
+.filters button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: all 0.3s;
+}
+.filters button {
+  background: #4d123f;
+  color: white;
+  cursor: pointer;
+}
+.filters button:hover {
+  background: #6d2a5a;
+  transform: scale(1.05);
+}
+
+/* ---------- Task List ---------- */
+.task-list ul {
+  list-style: none;
+  padding: 0;
+}
+.task-list li {
+  padding: 14px;
+  border-radius: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #fafafa;
+  transition: all 0.3s ease-in-out;
+}
+.task-list li:hover {
+  background: #f1f1f1;
+  transform: translateX(3px);
+}
+.task-list li.completed {
+  text-decoration: line-through;
+  background: #d4f8d4;
+}
+.task-list li.overdue { background: #ffd6d6; }
+.task-list li.today { background: #fff7c0; }
+
+.task-actions button {
+  margin-left: 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.task-actions button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+.task-actions .done { background: #28a745; color: white; }
+.task-actions .edit { background: #007bff; color: white; }
+.task-actions .delete { background: #dc3545; color: white; }
+
+/* ---------- Progress Bar ---------- */
+.progress-bar {
+  width: 100%;
+  height: 22px;
+  background: #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+}
+#progressFill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(135deg, #4d123f, #6d2a5a);
+  transition: width 0.6s ease-in-out;
+}
+#progressText {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+/* ---------- Weekly Planner ---------- */
+.weekly-planner ul { list-style: none; padding: 0; }
+.weekly-planner li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s;
+}
+.weekly-planner li:hover {
+  background: #d3a9a9;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  background: linear-gradient(135deg, #4d4312, #6d2a5a);
+  color: white;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

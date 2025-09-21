@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📚 Smart Study Planner</h1>
+    <button id="themeToggle">🌙 Dark Mode</button>
+  </header>
+
+  <main>
+    <!-- Motivational Quote -->
+    <section id="quoteBox">
+      <p id="quoteText"></p>
+    </section>
+
+    <!-- Task Form -->
+    <section class="task-form">
+      <h2>Add / Edit Task</h2>
+      <form id="taskForm">
+        <input type="hidden" id="editIndex">
+        <input type="text" id="taskTitle" placeholder="Enter Task (e.g. Math Homework)" required>
+        <input type="date" id="taskDeadline" required>
+        <select id="taskCategory">
+          <option value="General">General</option>
+          <option value="Math">Math</option>
+          <option value="Science">Science</option>
+          <option value="English">English</option>
+          <option value="History">History</option>
+        </select>
+        <select id="taskPriority">
+          <option value="High">High Priority</option>
+          <option value="Medium">Medium Priority</option>
+          <option value="Low">Low Priority</option>
+        </select>
+        <button type="submit">Save Task</button>
+      </form>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+      <input type="text" id="searchBox" placeholder="🔍 Search task...">
+      <select id="filterPriority">
+        <option value="All">All Priorities</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <select id="filterStatus">
+        <option value="All">All Status</option>
+        <option value="Completed">Completed</option>
+        <option value="Pending">Pending</option>
+      </select>
+      <button id="clearAll">🗑️ Clear All</button>
+      <button id="exportTasks">💾 Export</button>
+      <input type="file" id="importTasks" hidden>
+      <button id="importBtn">📂 Import</button>
+    </section>
+
+    <!-- Progress Tracker -->
+    <section class="progress-section">
+      <h2>Progress</h2>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+      <p id="progressText"></p>
+    </section>
+
+    <!-- Weekly Planner -->
+    <section class="weekly-planner">
+      <h2>Weekly Planner</h2>
+      <ul id="weeklyView"></ul>
+    </section>
+
+    <!-- Task List -->
+    <section class="task-list">
+      <h2>My Tasks</h2>
+      <ul id="taskContainer"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Smart Study Planner by Vanitha P © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
